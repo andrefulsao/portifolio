@@ -15,15 +15,19 @@
 }
 
 .cabecalho{
-    padding: 2% 0% 0% 15%;
-}
-
-.cabecalho__menu {
     display: flex;
-    gap: 80px;
+    padding: 2% 0% 0% 2%;
+    width: 31.25rem;
 }
 
-.cabecalho__menu__link{    
+.cabecalho__menu {    
+    display: flex;    
+    gap: 5rem;
+    width: auto;
+}
+
+.cabecalho__menu__link{   
+    display: flex; 
     text-decoration: none;
     font-family: var(--fonte-segundaria);
     font-size: 1.5rem;
@@ -124,11 +128,12 @@ body {
 
 @media (max-width: 1250px){
     .cabecalho{
-        padding: 10%;
+        padding: 5%;        
     }
 
-    .cabecalho__menu{
+    .cabecalho__menu{        
         justify-content: center;
+        gap: 1rem;                  
     }
 
     .apresentacao {
@@ -144,6 +149,6 @@ body {
 /* Story CSS */
 
 .img_curriculum{
-    width: 50rem;
+    width: 55rem;
     height: 62,5rem;    
 }
