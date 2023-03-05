@@ -90,8 +90,8 @@
 
 .apresentacao__links__navegacao:hover{
     background-color: var(--cor-hover);
-    width: 500px;
-    padding:30px 0px;
+    width: 31,25rem;
+    padding:1.8rem 0px;
     font-size: 1.8rem;
 }
 
@@ -124,6 +124,12 @@ body {
     font-weight: 400;
 }
 
+/* Story CSS */
+
+.img_curriculum{
+    width: 50%;
+}
+
 @media (max-width: 1250px){
     .cabecalho{        
         padding: 3%;
@@ -143,14 +149,11 @@ body {
         width: auto;
     }
 
-    .apresentacao__img{
-        width: auto;
+    .apresentacao__links__navegacao{
+        width: 100%;
     }
-}
 
-/* Story CSS */
-
-.img_curriculum{
-    width: 55rem;
-    height: 62,5rem;    
+    .apresentacao__img{
+        width: 100%;        
+    }
 }
