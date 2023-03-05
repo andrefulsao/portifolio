@@ -14,10 +14,8 @@
     padding: 0;
 }
 
-.cabecalho{
-    display: flex;
-    padding: 2% 0% 0% 2%;
-    width: 31.25rem;
+.cabecalho{    
+    padding: 2% 0% 0% 15%;    
 }
 
 .cabecalho__menu {    
@@ -90,7 +88,7 @@
     font-family: var(--fonte-segundaria);
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__navegacao:hover{
     background-color: var(--cor-hover);
     width: 500px;
     padding:30px 0px;
@@ -128,7 +126,8 @@ body {
 
 @media (max-width: 1250px){
     .cabecalho{
-        padding: 5%;        
+        display: flex;
+        padding: 3%;
     }
 
     .cabecalho__menu{        
