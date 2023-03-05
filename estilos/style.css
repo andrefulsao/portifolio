@@ -142,6 +142,10 @@ body {
     .apresentacao__conteudo{
         width: auto;
     }
+
+    .apresentacao__img{
+        width: auto;
+    }
 }
 
 /* Story CSS */
