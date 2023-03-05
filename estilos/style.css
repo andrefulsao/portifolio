@@ -125,8 +125,7 @@ body {
 }
 
 @media (max-width: 1250px){
-    .cabecalho{
-        display: flex;
+    .cabecalho{        
         padding: 3%;
     }
 
