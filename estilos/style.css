@@ -93,6 +93,7 @@
     width: 500px;
     padding:30px 0px;
     font-size: 30px;
+    transition: 2s;
 }
 
 .bloco {
