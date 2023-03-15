@@ -1,59 +1,162 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="shortcut icon" href="./imagens/pasta.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifolio</title>
 </head>
-
 <body>
-    <header class="cabecalho">              
-        <nav class="cabecalho__menu">
-            <a class="logo" href="index.html">Bem-vindo</a>  
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list">  
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="story.html">Resumo</a></li>
-            </ul>  
-        </nav>
+    <header class="cabecalho">          
+        <div class="container"> 
+            <div class="wrapper-principal">
+                <div class="wrapper-segundario">
+                <button> André Mendes Nunes </button>
+                    <ul class="opcoes">                        
+                        <li class="opcoes__item"><a href="#" class="opcoes__link">Inicio</a></li>
+                        <li class="opcoes__item"><a href="#" class="opcoes__link">Sobre mim</a></li>
+                        <li class="opcoes__item"><a href="#" class="opcoes__link">Curriculum</a></li>
+                    </ul>  
+                </div>              
+            </div>    
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu">
+                <span class="cabecalho__menu-hamburguer container__imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Inicio</a></li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Sobre mim</a></li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Curriculum</a></li>
+            </ul>
+        </div>           
+        
+        <div class="container">     
+            <a href="#" class="container__link">
+                <img src="./img/Sacola.png" alt="Carrinho de compras" class="container__imagem_img">                
+            </a>
+            <p class="container__descricao__icones">Curriculum</p>
+            <a href="#" class="container__link">
+                <img src="./img/Usuário.svg" alt="Meu perfil" class="container__imagem_img">                
+            </a>
+            <p class="container__descricao__icones">Sobre mim</p>
+        </div> 
     </header>
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong
-                    class="titulo-destaque">com um Front-end de qualidade!</strong></h1>
-            <p class="apresentacao__conteudo__texto">Olá! André Mendes Nunes, desenvolvedor Front-end e Back-end com especialidade
-                em React, HTML, CSS, Database Design e SQL. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos
-                conversar?</p>
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__titulo">Acesse minhas redes:</h2>
-                <a class="apresentacao__links__navegacao" href="https://github.com/andrefulsao">
-                    <img src="./imagens/github.png" alt="GitHub">
-                    GitHub
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/andré-mendes-nunes-a7a298157/">
-                    <img src="./imagens/linkedin.png" alt="Linkedin">
-                    Linkedin
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://www.instagram.com/andre.ohde/">
-                    <img src="./imagens/instagram.png" alt="Instagram">
-                    Instagram
-                </a>
-            </div>
-        </section>
-        <img class="apresentacao__img" src="./imagens/eu2.jpg" alt="Foto da André Mendes Nunes">        
-    </main>
-    <script src="./JS/mobile-navbar.js"></script>
+    <section class="container__bem-vindo">
+        <h1 class="container__bem-vindo__titulo">Bem-vindo ao meu Portifolio</h1>
+        <p class="container__bem-vindo__texto">Meu nome é André Mendes Nunes, vamos conversar?</p>
+    </section>  
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Meu Perfil</h2>
+            <!-- Slider main container -->            
+            <div class="carrossel__container">
+                <div class="swiper">
+                <!-- Additional required wrapper -->
+                
+                <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./img/eu1_resized.jpg" alt="minha imagem de perfil"></div>
+                        <div class="swiper-slide"><img src="./img/eu3_resized.jpg" alt="minha imagem de perfil"></div>
+                        <div class="swiper-slide"><img src="./img/eu4_resized.jpg" alt="minha imagem de perfil"> </div>
+                    </div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                </div>
+
+                <div class="card">           
+                    <div class="card__um">
+                        <span class="estrelinha"></span>
+                        <h2 class="card__titulo">Eleve seu negócio digital a outro nível.</h2>
+                        <p class="card__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                    </div>
+                    <div class="card__dois">                
+                            <img src="./img/code_resized.jpg" alt="Imagem ilustrativa" class="card__dois-imagem">                                   
+                        <a href="#" class="card__dois-saiba-mais">Saiba mais</a>
+                    </div>
+                </div>  
+            </div>             
+    </section>  
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novidades</h2>
+         <!-- Slider main container -->       
+        <div class="carrossel__container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                
+                <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./img/Programming-pana.svg" alt="minha imagem de perfil"></div>
+                        <div class="swiper-slide"><img src="./img/Pair programming-bro.svg" alt="minha imagem de perfil"></div>
+                        <div class="swiper-slide"><img src="./img/JavaScript frameworks-amico.svg" alt="minha imagem de perfil"> </div>
+                    </div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                </div>
+            <div class="card__segundo">           
+                <div class="card__um-dois">                
+                    <h2 class="card__titulo">Design totalmente responsivo.</h2>
+                    <p class="card__texto">Adéqua o site as dimenções do dispositivo utilizado ao acesso!</p>
+                </div>
+                <div class="card__dois-dois">   
+                    <span class="estrelinha-dois"></span>             
+                    <div class="container">
+                        <div class="loader"></div>
+                        <div class="loader"></div>
+                        <div class="loader"></div>
+                    </div>                                                   
+                </div>
+            </div>               
+        </div>             
+    </section>    
+    <hr/>
     <footer class="rodape">
-        <p>Desenvolvido por André Mendes Nunes</p>
+        <h2 class="rodape__titulo">Desenvolvido por André Mendes Nunes</h2>
+        <div class="contato">
+            <h2 class="contato__titulo">Contatos:</h2>
+            <ul class="lista__contato">            
+                <li class="contato__item">
+                    <span class="instagram"></span><a href="https://www.instagram.com/andre.ohde/" class="contato__link">Instagram</a>
+                </li>
+                <li class="contato__item">
+                    <span class="github"></span><a href="https://github.com/andrefulsao" class="contato__link">GitHub</a>
+                </li>
+                <li class="contato__item">
+                    <span class="linkedin"></span><a href="https://www.linkedin.com/in/andré-mendes-nunes-a7a298157/" class="contato__link">Linkedin</a>
+                </li>
+            </ul>
+        </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+    });
+    </script>    
 </body>
 </html>

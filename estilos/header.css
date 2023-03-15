@@ -1,0 +1,337 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--branco);
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__botao{
+    display: none;
+}
+
+.container__imagem{
+    padding: 0.5em;
+}
+
+.container__link{
+    margin-right: 1em;
+}
+
+.cabecalho__menu-hamburguer{
+    background-image: url(../img/Menu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width:60vw;
+}
+
+.container__botao:checked ~ .lista-menu{
+    display: block;
+    background-color: var(--branco);
+}
+
+.lista-menu__item{
+    padding: 1.5em;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.lista-menu__link{
+    text-decoration: none;
+    color: var(--azul-degrade);
+}
+
+.wrapper-principal{
+    display: none;
+}
+
+.container__descricao__icones{
+    display: none;
+}
+
+
+@media screen and (min-width:1024px){
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .wrapper-principal{
+        display: block;
+        margin: 1em 3em;        
+    }    
+
+    .wrapper-segundario{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .opcoes{        
+        display: flex;
+        margin: 0 2em;   
+        width: 100%;     
+    }
+
+    .opcoes__item{
+        text-transform: uppercase;        
+    }
+
+    .opcoes__link{
+        text-decoration: none;        
+        color: var(--azul);
+        font-weight: 500;
+        margin-left: 1em;
+    }
+
+    .container__descricao__icones{
+        display: block;
+        margin-right: 1em;
+        text-transform: uppercase;
+    }   
+
+    .container__link{
+        margin-right: 0;
+    }
+
+    button,
+    button::after {
+        padding: 12px 18px;
+        font-size: 18px;
+        background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+        border: 0;
+        color: #fff;
+        letter-spacing: 3px;
+        line-height: 1;
+        box-shadow: 6px 0px 0px #00e6f6;
+        outline: transparent;
+        position: relative;
+    }
+
+    button::after {
+        --slice-0: inset(50% 50% 50% 50%);
+        --slice-1: inset(80% -6px 0 0);
+        --slice-2: inset(50% -6px 30% 0);
+        --slice-3: inset(10% -6px 85% 0);
+        --slice-4: inset(40% -6px 43% 0);
+        --slice-5: inset(80% -6px 5% 0);
+        content: "HOVER ME";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+        text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+        clip-path: var(--slice-0);
+    }
+
+    button:hover::after {
+        animation: 1s glitch;
+        animation-timing-function: steps(2, end);
+    }
+
+    @keyframes glitch {
+        0% {
+            clip-path: var(--slice-1);
+            transform: translate(-20px, -10px);
+        }
+
+        10% {
+            clip-path: var(--slice-3);
+            transform: translate(10px, 10px);
+        }
+
+        20% {
+            clip-path: var(--slice-1);
+            transform: translate(-10px, 10px);
+        }
+
+        30% {
+            clip-path: var(--slice-3);
+            transform: translate(0px, 5px);
+        }
+
+        40% {
+            clip-path: var(--slice-2);
+            transform: translate(-5px, 0px);
+        }
+
+        50% {
+            clip-path: var(--slice-3);
+            transform: translate(5px, 0px);
+        }
+
+        60% {
+            clip-path: var(--slice-4);
+            transform: translate(5px, 10px);
+        }
+
+        70% {
+            clip-path: var(--slice-2);
+            transform: translate(-10px, 10px);
+        }
+
+        80% {
+            clip-path: var(--slice-5);
+            transform: translate(20px, -10px);
+        }
+
+        90% {
+            clip-path: var(--slice-1);
+            transform: translate(-10px, 0px);
+        }
+
+        100% {
+            clip-path: var(--slice-1);
+            transform: translate(0);
+        }
+    }
+
+      
+}
+
+@media screen and (min-width:1728px){
+
+    .opcoes{
+        display: flex;
+        margin: 0 1em;                
+    }
+
+    .opcoes__item{
+        margin: 0 1em;
+        text-transform: uppercase;
+        font-size: 20px;        
+    }
+
+    .container__descricao__icones{
+        display: block;
+        margin-right: 5em;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .container__imagem_img{
+        margin-right: 1em;
+    }
+
+    .container{
+        margin-right: 0em;
+    }
+
+    .container__link{
+        margin-right: 0;
+    }
+
+    button,
+    button::after {
+        padding: 16px 20px;
+        font-size: 18px;
+        background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+        border: 0;
+        color: #fff;
+        letter-spacing: 3px;
+        line-height: 1;
+        box-shadow: 6px 0px 0px #00e6f6;
+        outline: transparent;
+        position: relative;
+        width: 50%;
+    }
+
+    button::after {
+        --slice-0: inset(50% 50% 50% 50%);
+        --slice-1: inset(80% -6px 0 0);
+        --slice-2: inset(50% -6px 30% 0);
+        --slice-3: inset(10% -6px 85% 0);
+        --slice-4: inset(40% -6px 43% 0);
+        --slice-5: inset(80% -6px 5% 0);
+        content: "HOVER ME";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+        text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+        clip-path: var(--slice-0);
+    }
+
+    button:hover::after {
+        animation: 1s glitch;
+        animation-timing-function: steps(2, end);
+    }
+
+    @keyframes glitch {
+        0% {
+            clip-path: var(--slice-1);
+            transform: translate(-20px, -10px);
+        }
+
+        10% {
+            clip-path: var(--slice-3);
+            transform: translate(10px, 10px);
+        }
+
+        20% {
+            clip-path: var(--slice-1);
+            transform: translate(-10px, 10px);
+        }
+
+        30% {
+            clip-path: var(--slice-3);
+            transform: translate(0px, 5px);
+        }
+
+        40% {
+            clip-path: var(--slice-2);
+            transform: translate(-5px, 0px);
+        }
+
+        50% {
+            clip-path: var(--slice-3);
+            transform: translate(5px, 0px);
+        }
+
+        60% {
+            clip-path: var(--slice-4);
+            transform: translate(5px, 10px);
+        }
+
+        70% {
+            clip-path: var(--slice-2);
+            transform: translate(-10px, 10px);
+        }
+
+        80% {
+            clip-path: var(--slice-5);
+            transform: translate(20px, -10px);
+        }
+
+        90% {
+            clip-path: var(--slice-1);
+            transform: translate(-10px, 0px);
+        }
+
+        100% {
+            clip-path: var(--slice-1);
+            transform: translate(0);
+        }
+    }
+
+      
+}
